@@ -1,0 +1,83 @@
+﻿textarea[is="highlighted-code"] {
+    padding: 8px;
+}
+
+.currently-showing-menu {
+    background-color: green;
+}
+
+.cutted {
+    background-color: grey;
+}
+
+ul, #DirectoryHierarchy {
+    list-style-type: none;
+}
+
+#DirectoryHierarchy {
+    margin: 0;
+    padding: 0;
+}
+
+.directoryHasSub {
+    cursor: pointer;
+    -webkit-user-select: none; /* Safari 3.1+ */
+    -moz-user-select: none; /* Firefox 2+ */
+    -ms-user-select: none; /* IE 10+ */
+    user-select: none;
+}
+
+    .directoryHasSub:hover {
+        background-color: yellow;
+    }
+
+    .directoryHasSub::before {
+        content: "\25B6";
+        color: black;
+        display: inline-block;
+        margin-right: 6px;
+    }
+
+.directory::before {
+    content: "\25B6";
+    color: black;
+    display: inline-block;
+    margin-right: 6px;
+}
+
+.file::before {
+    content: "\25A3";
+    color: black;
+    display: inline-block;
+    margin-right: 6px;
+}
+
+.directory-down::before {
+    -ms-transform: rotate(90deg); /* IE 9 */
+    -webkit-transform: rotate(90deg); /* Safari */
+    transform: rotate(90deg);
+}
+
+.directoryContent {
+    display: none;
+}
+
+.active {
+    display: block;
+}
+
+.file.active {
+    background-color: orangered;
+}
+
+.file {
+    cursor: pointer;
+}
+
+    .file:hover {
+        background-color: yellow;
+    }
+
+.scroolab {
+    overflow: auto;
+}

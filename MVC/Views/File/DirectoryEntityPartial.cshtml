@@ -1,0 +1,14 @@
+﻿@model MVC.Models.DirectoryModel
+<li>
+    <span class="directoryHasSub" data-id="@Model.Id">@Model.Name</span>
+    <ul class="directoryContent">
+        @foreach (var item in Model.SubDirectories)
+        { 
+                @await Html.PartialAsync("DirectoryEntityPartial", item) 
+        }
+        @foreach (var fl in Model.Files)
+        {
+            <li class="file" data-id="@fl.Id" data-type="@((Int16)fl.FileType)">@fl.FileName</li>
+        }
+    </ul>
+</li>
